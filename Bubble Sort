@@ -1,1 +1,35 @@
+#include <iostream>
+using namespace std;
 
+void bubbleSort(int a[])
+{
+    for(int i=0; i<5; i++) {
+        for(int j=0; j<(5-i-1); j++) {
+            if(a[j] > a[j+1]) {
+                int tmp = a[j];
+                a[j] = a[j+1];
+                a[j+1] = tmp;
+            }
+        }
+
+    }
+    for(int k=0; k<5; k++) {
+        cout << a[k] << " ";
+    }
+    
+}
+
+
+int main()
+{
+    int myarray[5];
+    cout << "Enter 5 numbers: ";
+    for(int i=0; i<5; i++) {
+        cin >> myarray[i];
+    }
+    cout << "Stored in Memory" << endl;
+    cout << myarray << endl;
+    cout << "Sorted Here" << endl;
+    bubbleSort(myarray);
+    
+}
